@@ -17,6 +17,6 @@ public class Cviko01_Uloha01 {
 
     public static boolean isOk(String input)
     {
-        return input.compareTo("Budapešť") < 0;
+        return input.compareTo("Budapešť") < 0; // Můj comment
     }
 }

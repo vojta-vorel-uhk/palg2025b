@@ -17,6 +17,6 @@ public class Cviko01_Uloha02 {
 
     public static boolean isOk(String input)
     {
-        return input.indexOf(45)>0;
+        return input.indexOf('-')>0;
     }
 }

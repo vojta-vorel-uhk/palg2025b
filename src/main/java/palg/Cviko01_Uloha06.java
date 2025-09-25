@@ -18,7 +18,15 @@ public class Cviko01_Uloha06 {
 
     public static boolean isOk(String input)
     {
-        var stream = Arrays.stream(input.split(" "));
-        return stream.filter(p->p.length()<=2).count() > 1;
+//        var stream = Arrays.stream(input.split(" "));
+//        return stream.filter(p->p.length()<=2).count() > 1;
+        var split = input.split(" ");
+        var counter = 0;
+        for(var s:split)
+        {
+            if(s.length() <= 2)
+                counter++;
+        }
+        return counter > 1;
     }
 }
