@@ -12,17 +12,24 @@ public class Main
     public static final Location Munchen = new Location(new double[]{11.5761872, 48.1376225},"München");
     public static final Location Beograd = new Location(new double[]{20.4709931, 44.8039419},"Beograd");
 
+
     public static void main(String[] args)
     {
-        LinkedList<Location> list =
-                new LinkedList<>();
-        list.add(HradecKralove);
-        list.add(0,Pardubice);
-        list.add(0,Praha);
-        list.add(1,Munchen);
-        list.add(1,Beograd);
-        list.add(0,KarlovyVary);
-        System.out.println(list.indexOf(Munchen));
+        RouteList list =
+                new RouteList();
+        list.addFirst(HradecKralove);
+        list.addFirst(Pardubice);
+        list.addFirst(Praha);
+        list.addLast(Munchen);
+        list.addLast(Beograd);
+        list.addLast(KarlovyVary);
+        for(var loc : list)
+        {
+            System.out.println(loc);
+        }
+
+        //System.out.println(list.indexOf(Munchen));
+
         // 1
         // Založ LinkedList
         // Přidej HradecKralove
