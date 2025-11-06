@@ -8,6 +8,7 @@ public class Main {
 
     public static void printNumbers(long start)
     {
+        System.out.println(start);
         if(start <= 1)
             return;
 
@@ -18,8 +19,15 @@ public class Main {
     }
 
     // Doplň druhou metodu tak, aby dělala totéž, ale bez rekurze
-    public static long printNumbers2(long input)
+    public static void printNumbers2(long input)
     {
-        throw new IndexOutOfBoundsException();
+        while (input > 1)
+        {
+            System.out.println(input);
+            if(input % 2 == 0)
+                input /= 2;
+            else
+                input = input * 3 + 1;
+        }
     }
 }

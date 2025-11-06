@@ -5,12 +5,17 @@ import java.io.File;
 public class Main {
     public static void main(String[] args)
     {
-        System.out.println(compute(5));
+        System.out.println(compute(5000));
     }
 
     // Uhodni, co metoda měla dělat a uprav ji tak, aby fungovala.
     public static long compute(long input)
     {
-        return input * compute(input -1);
+         int result = 1;
+         for (int i=2;i<=input;i++)
+             result *= i;
+         return result;
+//        if(input == 1) return 1;
+//        return input * compute(input - 1);
     }
 }
