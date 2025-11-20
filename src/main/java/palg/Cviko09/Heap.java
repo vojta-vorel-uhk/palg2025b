@@ -12,6 +12,31 @@ public class Heap
         this.data = new Message[capacity];
         count = 0;
     }
+    public Message extractMin(){
+        var result = data[0];
+        data[0] = data[count-1];
+        data[count-1] = null;
+        count--;
+        var current = 0;
+        while (true){
+            var child = lowerChildIndex(current);
+            if(child == -1) break;
+            if(data[child].compareTo(data[current]) < 0) {
+                swap(current, child);
+                current = child;
+            }
+            else {
+                break;
+            }
+        }
+        return result;
+    }
+    private int lowerChildIndex(int current){
+        // pokud nemám potomky, vrátím -1
+        // pokud mám jen levého, vrátím jeho index
+        // pokud mám oba, vrátím index toho, který má nižší klíč
+        return 0;
+    }
     public void add(Message m)
     {
         data[count] = m;
