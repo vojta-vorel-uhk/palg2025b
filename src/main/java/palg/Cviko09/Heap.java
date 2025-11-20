@@ -12,7 +12,21 @@ public class Heap
         this.data = new Message[capacity];
         count = 0;
     }
-
+    public void add(Message m)
+    {
+        data[count] = m;
+        count++;
+        repair(count);
+    }
+    private void repair(int index)
+    {
+        if(index == 0) return;
+        var parent = parent(index);
+        if(!isOk(index, parent)) {
+            swap(index,parent);
+            repair(parent);
+        }
+    }
     private boolean isOk(int child, int parent)
     {
         return data[child].compareTo(data[parent]) > 0;
