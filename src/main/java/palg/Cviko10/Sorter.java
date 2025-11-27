@@ -47,4 +47,10 @@ public abstract class Sorter
             System.out.println(e);
         }
     }
+
+    protected void swap(Message[] m, int a, int b){
+        var temp = m[a];
+        m[a] = m[b];
+        m[b] = temp;
+    }
 }

@@ -1,12 +1,12 @@
 package palg.Messages;
 import java.time.Instant;
 
-public class Message
+public class Message implements Comparable<Message>
 {
     private long unixTimestamp;
     private String text;
 
-    public Message(Instant instant, String text)
+    public Message(Instant  instant, String text)
     {
         this.unixTimestamp = instant.getEpochSecond();
         this.text = text;
