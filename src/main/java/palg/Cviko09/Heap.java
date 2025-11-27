@@ -32,16 +32,21 @@ public class Heap
         return result;
     }
     private int lowerChildIndex(int current){
-        // pokud nemám potomky, vrátím -1
-        // pokud mám jen levého, vrátím jeho index
-        // pokud mám oba, vrátím index toho, který má nižší klíč
-        return 0;
+        var leftChild = leftChild(current);
+        var rightChild = rightChild(current);
+        if(leftChild>=count) // pokud nemám potomky, vrátím -1
+            return -1;
+        if(rightChild>=count) // pokud mám jen levého, vrátím jeho index
+            return leftChild;
+        if(data[rightChild].compareTo(data[leftChild]) > 0)  // pokud mám oba, vrátím index toho, který má nižší klíč
+            return leftChild;
+        return  rightChild;
     }
     public void add(Message m)
     {
         data[count] = m;
-        count++;
         repair(count);
+        count++;
     }
     private void repair(int index)
     {
