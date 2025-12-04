@@ -23,7 +23,7 @@ public class Main
         // TODO 2: Uprav metodu Utils.merge tak, aby fungovala pro String[] i pro Message[]
 
         // TODO 3: Odkomentuj a zprovozni MergeSorter
-        //new MergeSorter().sortWithReport(randomMessages(),"MergeSorter.html");
+        new MergeSorter().sortWithReport(randomMessages(),"MergeSorter.html");
         //new BubbleSorter().sortWithReport(randomMessages(),"BubbleSorter.html");
     }
 
