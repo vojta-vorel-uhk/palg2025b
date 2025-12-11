@@ -1,5 +1,6 @@
 package palg.Cviko12;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 
@@ -20,7 +21,6 @@ public class Uloha05
                 .of(2025, 10, 26, 2, 30)
                 .atZone(ZoneId.of("Europe/Prague"))
                 .toInstant();
-
         System.out.println(utcTime2);
     }
 

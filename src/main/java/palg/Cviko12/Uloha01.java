@@ -10,8 +10,13 @@ public class Uloha01
         //  Najdi jiný string, bude mít stejný hash jako heslo 123ABC
 
         String heslo1 = "123ABC";
+        String heslo2 = "123AAb";
+        //String heslo2 = "123A"+(char)2113+(char)0;
+        //String heslo2 = "123A"+(char)0+(char)2113;
         int hash1 = heslo1.hashCode();
+        int hash2 = heslo2.hashCode();
         System.out.println(heslo1 + " > "+ hash1);
+        System.out.println(heslo2 + " > "+ hash2);
     }
 
 }
