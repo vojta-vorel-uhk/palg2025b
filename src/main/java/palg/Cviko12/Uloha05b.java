@@ -11,6 +11,11 @@ public class Uloha05b
         var zoned = ZonedDateTime.of(wallclock,newYorkZone);
         var instant = zoned.toInstant();
 
+        var zoned2 = instant.atZone(ZoneId.of("Europe/Prague"));
+        System.out.println(wallclock);
+        System.out.println(instant);
+        System.out.println(zoned2);
+
         // TODO: Hodiny na zdi v New Yorku ukazovaly 18.12.2025, 19:20
         //  Vypiš, jaký datum a čas byl v Praze
     }
